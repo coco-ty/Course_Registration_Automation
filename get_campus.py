@@ -84,20 +84,11 @@ for param in params:
 				col += col_inc
 			if row[7][:9] == "---------": 
 				continue
-			#
 			row.append("")
-			#
 			if row[10] == "TBA": 
 				row[10] = ""
-			#
 			row[4] = param[0]
 			row[6] = param[1]
-			#
-			# mm = re.search("^(.*?)<a href='javascript:void\(\)' onClick='window.open\(\"(.*?)\".*?\)'>.*?</a>",row[13])
-			# if mm:
-			# 	row[13] = mm.group(1)
-			# 	row[14] = mm.group(2)
-			#
 			row.append(department_name)
 			results.append(map(lambda x:row[x].strip(),[4,6,0,15,1,2,3,5,7,8,9,10,11,12,13,14]))
 		# year,semester,coursecode,subject_name,section,instructors,
