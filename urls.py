@@ -1,0 +1,20 @@
+from django.conf.urls.defaults import *
+
+urlpatterns = patterns('main.views',
+    (r'^$', 'home'),
+    (r'^login/$', 'login'),
+    (r'^logout/$', 'logout'),
+    (r'^process/?$', 'process'),    
+    (r'^authenticate/?$', 'authenticate'), 
+    (r'^rate/?$', 'rate'), 
+    (r'^sites/$','sites'),   
+    (r'^sites/(?P<url>.+)/$','sites'),   
+    (r'^courses/$','courses'),
+    (r'^courses/(?P<code>.+)/$','courses'),
+    (r'^sections/(?P<id>.+)/$','sections'),
+    (r'^classrooms/(?P<id>.+)/$','classrooms'),
+    (r'^depts/$','department'),
+    (r'^depts/(?P<deptcode>.+)/$','department'),
+    (r'^books/$','textbook'),
+    (r'^books/(?P<isbn>.+)/$','textbook'),
+)
