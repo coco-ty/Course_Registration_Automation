@@ -1,1 +1,1 @@
-# Web_Front_Django
+# Course_Registration_Automation
